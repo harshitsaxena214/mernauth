@@ -40,7 +40,7 @@ Follow these steps to configure Brevo:
 
 ### ⚙️ SMTP Configuration
 
-- Add SMTP environment variables in your `.env` file (refer `.env.example`)  
+- Add SMTP environment variables in your `.env` file (refer `.env.example`) in server folder
 - The **SMTP user** will be the email you used to sign in  
 
 ---
@@ -53,7 +53,68 @@ Follow these steps to configure Brevo:
 git clone https://github.com/harshitsaxena214/mernauth.git
 cd <your-project-folder>
 
+```
+
 ### 2️⃣ Setup Frontend (Client)
 
 ```bash
 cd client
+```
+
+- Create a `.env` file using `.env.example`  
+- Add all required environment variables  
+
+### ▶️ Run the Frontend
+
+```bash
+npm install
+npm run dev
+```
+
+### 3️⃣ Setup Backend (Server)
+
+- Open New Terminal
+
+```bash
+cd server
+```
+
+- Create a `.env` file using `.env.example`  
+- Add all required environment variables (including SMTP config)  
+
+### ▶️ Run the Backend
+
+```bash
+npm install
+npm run dev
+```
+
+## ▶️ Running the Project
+
+- Start the client  
+- Start the server  
+
+Open your browser and go to:
+
+```bash
+http://localhost:5173
+```
+- Port may vary depending on your setup
+
+---
+
+## 🔄 Authentication Flow
+
+- User enters email  
+- OTP is sent via Brevo SMTP  
+- User verifies OTP  
+- JWT token is generated  
+- User gets authenticated access  
+
+---
+
+## 🔐 Password Recovery Flow
+
+- User clicks **Forgot Password**  
+- Reset link / OTP is sent via email  
+- User sets a new password securely  
