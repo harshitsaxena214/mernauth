@@ -41,7 +41,7 @@ Follow these steps to configure Brevo:
 ### ⚙️ SMTP Configuration
 
 - Add SMTP environment variables in your `.env` file (refer `.env.example`) in server folder
-- The **SMTP user** will be the email you used to sign in  
+- The **SENDER EMAIL** will be the email you used to sign in  
 
 ---
 
